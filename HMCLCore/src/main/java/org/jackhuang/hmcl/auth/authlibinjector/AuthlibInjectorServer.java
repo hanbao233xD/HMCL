@@ -147,7 +147,6 @@ public class AuthlibInjectorServer implements Observable {
     }
 
     public boolean isNonEmailLogin() {
-        return nonEmailLogin;
     }
 
     public String fetchMetadataResponse() throws IOException {
@@ -199,7 +198,6 @@ public class AuthlibInjectorServer implements Observable {
                         return converted;
                     })
                     .orElse(emptyMap());
-            this.nonEmailLogin = metaObject.flatMap(meta -> tryCast(meta.get("feature.non_email_login"), JsonPrimitive.class))
                     .map(it -> it.getAsBoolean())
                     .orElse(false);
         }
