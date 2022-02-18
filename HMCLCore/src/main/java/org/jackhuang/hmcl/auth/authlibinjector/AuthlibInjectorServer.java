@@ -200,8 +200,6 @@ public class AuthlibInjectorServer implements Observable {
                     })
                     .orElse(emptyMap());
             this.nonEmailLogin = false;
-                    .map(it -> it.getAsBoolean())
-                    .orElse(false);
         }
     }
 
