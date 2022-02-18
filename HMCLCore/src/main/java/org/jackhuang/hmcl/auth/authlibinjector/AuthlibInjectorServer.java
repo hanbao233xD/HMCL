@@ -147,8 +147,7 @@ public class AuthlibInjectorServer implements Observable {
     }
 
     public boolean isNonEmailLogin() {
-        // return nonEmailLogin;
-        return false;
+        return nonEmailLogin;
     }
 
     public String fetchMetadataResponse() throws IOException {
@@ -200,6 +199,7 @@ public class AuthlibInjectorServer implements Observable {
                         return converted;
                     })
                     .orElse(emptyMap());
+            this.nonEmailLogin = false;
                     .map(it -> it.getAsBoolean())
                     .orElse(false);
         }
