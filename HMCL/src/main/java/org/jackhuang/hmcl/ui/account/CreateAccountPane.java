@@ -526,7 +526,7 @@ public class CreateAccountPane extends JFXDialogLayout implements DialogAware {
             } else if ((factory instanceof AuthlibInjectorAccountFactory) && cboServers != null) {
                 AuthlibInjectorServer server = cboServers.getValue();
                 if (server != null && !server.isNonEmailLogin()) {
-                    return true;
+                    return false;
                 }
             }
             return false;
