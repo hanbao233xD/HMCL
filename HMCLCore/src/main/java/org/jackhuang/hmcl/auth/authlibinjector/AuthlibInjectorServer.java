@@ -147,6 +147,7 @@ public class AuthlibInjectorServer implements Observable {
     }
 
     public boolean isNonEmailLogin() {
+        // return nonEmailLogin;
     }
 
     public String fetchMetadataResponse() throws IOException {
